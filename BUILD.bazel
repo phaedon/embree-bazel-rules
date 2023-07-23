@@ -25,6 +25,7 @@ cc_library(
             "include/embree4/**",
         ],
     ),
+    strip_include_prefix = "include",
     visibility = ["//visibility:public"],
     deps = select({
         "@bazel_tools//src/conditions:linux_x86_64": [":embree-x86_64-linux"],
